@@ -1,0 +1,58 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+img,
+.video {
+    display: flex;
+    margin: 0 auto;
+}
+h2 {
+    color: blue;
+    text-align: center;
+}
+p {
+    margin: 30px;
+}
+#last {
+    flex-direction: column;
+    display: flex;
+    margin: 0 auto;
+}
+#last > * {
+    margin: 10px auto;
+}
+#h {
+    color: crimson;
+    text-align: center;
+    font-size: 30px;
+}
+
+#but {
+    background-color: crimson;
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+.ab {
+    color: black;
+    text-decoration: none;
+}
+#nom {
+    padding: 10px 767px 10px 10px;
+}
+#email {
+    padding: 10px 767px 10px 10px;
+}
+#message {
+    padding: 10px 767px 150px 10px;
+}
+input {
+    border-radius: 8px;
+}
+#web {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 150px;
+}
