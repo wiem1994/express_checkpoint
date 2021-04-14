@@ -8,28 +8,25 @@ var x =
     today.getHours() > 8 &&
     today.getHours() < 18;
 
-app.get("/", (req, res) => {
-    if (x) {
-        res.sendFile(__dirname + "/public/home.html");
-    } else {
+const myLogger = function (req, res, next) {
+    if (!x) {
         res.sendFile(__dirname + "/public/closed.html");
     }
+    next();
+};
+
+app.use(myLogger);
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/home.html");
 });
 
 app.get("/services", (req, res) => {
-    if (x) {
-        res.sendFile(__dirname + "/public/services.html");
-    } else {
-        res.sendFile(__dirname + "/public/closed.html");
-    }
+    res.sendFile(__dirname + "/public/services.html");
 });
 
 app.get("/contact", (req, res) => {
-    if (x) {
-        res.sendFile(__dirname + "/public/contact.html");
-    } else {
-        res.sendFile(__dirname + "/public/closed.html");
-    }
+    res.sendFile(__dirname + "/public/contact.html");
 });
 
 app.get("/style.css", (req, res) => {
