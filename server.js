@@ -5,8 +5,8 @@ var today = new Date();
 var x =
     today.getDay() > 0 &&
     today.getDay() < 6 &&
-    today.getHours() > 9 &&
-    today.getHours() < 17;
+    today.getHours() > 8 &&
+    today.getHours() < 18;
 
 app.get("/", (req, res) => {
     if (x) {
